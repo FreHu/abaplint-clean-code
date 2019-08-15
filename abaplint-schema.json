@@ -1,0 +1,84 @@
+{
+    "$id": "abaplint-schema.com",
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "global": {
+            "type": "object",
+            "properties": {
+                "version": {
+                    "type": "string",
+                    "enum": [
+                        "v700",
+                        "v702",
+                        "v740sp02",
+                        "v740sp05",
+                        "v740sp08",
+                        "v750",
+                        "v751",
+                        "v752",
+                        "v753",
+                        "v755",
+                        "Cloud"
+                    ]
+                },
+                "skipGeneratedGatewayClasses": {
+                    "type": "boolean"
+                },
+                "skipGeneratedPersistentClasses": {
+                    "type": "boolean"
+                },
+                "skipGeneratedFunctionGroups": {
+                    "type": "boolean"
+                },
+                "applyUnspecifiedRules": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "rules": {
+            "type": "object",
+            "properties": {
+                "7bitAscii": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "exclude": {
+                            "type": "array"
+                        }
+                    }
+                },
+                "avoid_use": {
+                    "properties": {
+                        "define": {
+                            "type": "boolean"
+                        },
+                        "endselect": {
+                            "type": "boolean"
+                        },
+                        "execSQL": {
+                            "type": "boolean"
+                        },
+                        "kernelCall": {
+                            "type": "boolean"
+                        },
+                        "communication": {
+                            "type": "boolean"
+                        },
+                        "statics": {
+                            "type": "boolean"
+                        },
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "exclude": {
+                            "type": "array"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
