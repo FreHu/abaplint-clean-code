@@ -8,10 +8,6 @@
         "applyUnspecifiedRules": true
     },
     "rules": {
-        "7bit_ascii": {
-            "enabled": true,
-            "exclude": []
-        },
         "avoid_use": {
             "enabled": true,
             "exclude": [],
@@ -23,21 +19,6 @@
             "statics": true
         },
         "breakpoint": {
-            "enabled": true,
-            "exclude": []
-        },
-        "check_variables": {
-            "enabled": true,
-            "exclude": []
-        },
-        "class_attribute_names": {
-            "enabled": true,
-            "exclude": [],
-            "ignoreExceptions": true,
-            "statics": "^G._.*$",
-            "instance": "^M._.*$"
-        },
-        "cloud_types": {
             "enabled": true,
             "exclude": []
         },
@@ -53,14 +34,6 @@
             "enabled": true,
             "exclude": []
         },
-        "contains_tab": {
-            "enabled": true,
-            "exclude": []
-        },
-        "definitions_top": {
-            "enabled": true,
-            "exclude": []
-        },
         "description_empty": {
             "enabled": true,
             "exclude": []
@@ -71,11 +44,6 @@
             "keywords": true,
             "startParen": true,
             "endParen": true
-        },
-        "empty_line_in_statement": {
-            "enabled": true,
-            "exclude": [],
-            "allowChained": false
         },
         "empty_statement": {
             "enabled": true,
@@ -91,10 +59,6 @@
             "select": true,
             "do": true,
             "at": true
-        },
-        "exit_or_check": {
-            "enabled": true,
-            "exclude": []
         },
         "exporting": {
             "enabled": true,
