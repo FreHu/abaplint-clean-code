@@ -5,7 +5,7 @@
         "skipGeneratedGatewayClasses": true,
         "skipGeneratedPersistentClasses": true,
         "skipGeneratedFunctionGroups": true,
-        "applyUnspecifiedRules": true
+        "applyUnspecifiedRules": false
     },
     "rules": {
         "avoid_use": {
@@ -99,15 +99,6 @@
             "enabled": true,
             "exclude": []
         },
-        "keywords_upper": {
-            "enabled": true,
-            "exclude": [],
-            "ignoreExceptions": true,
-            "ignoreLowerClassImplmentationStatement": true,
-            "ignoreGlobalClassDefinition": false,
-            "ignoreGlobalInterface": false,
-            "ignoreFunctionModuleName": false
-        },
         "line_length": {
             "enabled": true,
             "exclude": [],
@@ -117,19 +108,6 @@
             "enabled": true,
             "exclude": [],
             "ignoreExceptions": true
-        },
-        "local_class_naming": {
-            "enabled": true,
-            "exclude": [],
-            "local": "^LCL_.*$",
-            "test": "^LTCL_.*$"
-        },
-        "local_variable_names": {
-            "enabled": true,
-            "exclude": [],
-            "expectedData": "^L._.*$",
-            "expectedConstant": "^LC_.*$",
-            "expectedFS": "^<L._.*>$"
         },
         "max_one_statement": {
             "enabled": true,
@@ -142,19 +120,7 @@
         "method_length": {
             "enabled": true,
             "exclude": [],
-            "statements": 100
-        },
-        "method_parameter_names": {
-            "enabled": true,
-            "exclude": [],
-            "ignoreExceptions": true,
-            "importing": "^I._.*$",
-            "returning": "^R._.*$",
-            "changing": "^C._.*$",
-            "exporting": "^E._.*$",
-            "ignoreNames": [
-                "P_TASK"
-            ]
+            "statements": 25
         },
         "mix_returning": {
             "enabled": true,
@@ -211,7 +177,6 @@
             "exclude": [],
             "badOperators": [
                 "EQ",
-                "><",
                 "NE",
                 "GE",
                 "GT",
@@ -245,15 +210,7 @@
             "ignoreGlobalDefinition": true,
             "ignoreExceptions": true
         },
-        "start_at_tab": {
-            "enabled": true,
-            "exclude": []
-        },
         "superclass_final": {
-            "enabled": true,
-            "exclude": []
-        },
-        "tabl_enhancement_category": {
             "enabled": true,
             "exclude": []
         },
