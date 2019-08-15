@@ -1,2 +1,2 @@
 # abaplint-clean-code
-Abaplint definitions according to ABAP clean code guidelines
+Rule documentation and Abaplint definitions according to ABAP clean code guidelines
