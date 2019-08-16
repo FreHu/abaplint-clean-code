@@ -22,10 +22,6 @@
             "enabled": true,
             "exclude": []
         },
-        "colon_missing_space": {
-            "enabled": true,
-            "exclude": []
-        },
         "commented_code": {
             "enabled": true,
             "exclude": []
@@ -37,13 +33,6 @@
         "description_empty": {
             "enabled": true,
             "exclude": []
-        },
-        "double_space": {
-            "enabled": true,
-            "exclude": [],
-            "keywords": true,
-            "startParen": true,
-            "endParen": true
         },
         "empty_statement": {
             "enabled": true,
@@ -81,20 +70,6 @@
             "enabled": true,
             "exclude": []
         },
-        "in_statement_indentation": {
-            "enabled": true,
-            "exclude": [],
-            "ignoreExceptions": true
-        },
-        "indentation": {
-            "enabled": true,
-            "exclude": [],
-            "ignoreExceptions": true,
-            "alignTryCatch": false,
-            "globalClassSkipFirst": false,
-            "ignoreGlobalClassDefinition": false,
-            "ignoreGlobalInterface": false
-        },
         "inline_data_old_versions": {
             "enabled": true,
             "exclude": []
@@ -103,11 +78,6 @@
             "enabled": true,
             "exclude": [],
             "length": 120
-        },
-        "line_only_punc": {
-            "enabled": true,
-            "exclude": [],
-            "ignoreExceptions": true
         },
         "max_one_statement": {
             "enabled": true,
@@ -189,26 +159,11 @@
             "exclude": [],
             "ignoreExceptions": false
         },
-        "sequential_blank": {
-            "enabled": true,
-            "exclude": [],
-            "lines": 4
-        },
         "short_case": {
             "enabled": true,
             "exclude": [],
             "length": 1,
             "allow": []
-        },
-        "space_before_colon": {
-            "enabled": true,
-            "exclude": []
-        },
-        "space_before_dot": {
-            "enabled": true,
-            "exclude": [],
-            "ignoreGlobalDefinition": true,
-            "ignoreExceptions": true
         },
         "superclass_final": {
             "enabled": true,
@@ -223,10 +178,6 @@
             "exclude": []
         },
         "when_others_last": {
-            "enabled": true,
-            "exclude": []
-        },
-        "whitespace_end": {
             "enabled": true,
             "exclude": []
         }

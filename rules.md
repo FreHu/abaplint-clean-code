@@ -55,12 +55,27 @@ Enabled, default 2.
 
 ### max_one_statement
 
-Checks that code only contains one statement per line. Enabled by default.
+Checks that code only contains one statement per line. 
+
+Enabled.
 
 
 ### method_length
 
 https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-methods-small says 3-5 statements, which would raise a lot of violations. The number 25 is also used often (fits within one screen), for now I am using it a a sane max limit.
+
+Enabled.
+
+### if_in_if
+
+https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-the-nesting-depth-low
+
+
+### line_length
+
+Enabled by default. 120 is the perscribed preferable length:
+
+https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#stick-to-a-reasonable-line-length
 
 ## Syntax usage
 
@@ -68,9 +83,13 @@ https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-meth
 
 I think it is the same thing as avoid_use. Includes `refresh`, `compute`, `add`, `subtract`, `multiply`, `move`, `divide`, `requested`.
 
+Enabled.
+
 ### functional_writing
 
-Checks that method calls use the functional `method()` style instead of `CALL METHOD method` if possible. Enabled by default.
+Checks that method calls use the functional `method()` style instead of `CALL METHOD method` if possible. 
+
+Enabled.
 
 ### avoid_use
 
@@ -87,11 +106,15 @@ Currently supported:
 
 `TODO this is easy to extend, check for other statements which could be added`
 
+Enabled.
+
 ### breakpoint
 
 - checks for `BREAK` and `BREAK-POINT` statements.
 
 Should be part of clean variant, although this check could easily be merged with `avoid_use`
+
+Enabled.
 
 ### use_new
 
@@ -112,7 +135,6 @@ Checks that only one returning/exporting/changing parameter is present per metho
 https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#use-either-returning-or-exporting-or-changing-but-not-a-combination
 
 Enabled.
-
 
 ### superclass_final
 
@@ -150,6 +172,8 @@ Checks for inline data declarations in releases which are unavailable.
 
 `possibly this is redundant, as you can specify the language version`
 
+Enabled.
+
 ## Redundant code
 
 ### commented_code
@@ -169,12 +193,14 @@ Enabled.
 
 ### exporting
 
-Checks for EXPORTING statements which can be omitted from method calls. This is a good practice, enabled by default.
+Checks for EXPORTING statements which can be omitted from method calls.
+
+Enabled.
 
 ## Naming conventions
 
 Enables you to enforce a pattern, such as a prefix, for class, member and variable names.
-Clean ABAP suggests that you eliminate prefixes.
+Clean ABAP suggests that you eliminate prefixes. This check should therefore be either disabled or configured in such a way that it reports prefixed variables instead.
 
 `TODO check if negative lookbehinds are supported by the regex so common prefixes can be disallowed`
 
@@ -184,51 +210,45 @@ Class and global variables
 
 `TODO check if globals are sometimes recommended`
 
+For now not enabled.
+
 ### local_class_naming
 
-Clean ABAP suggests that you eliminate prefixes, but for local classes it is very common. For now not included.
+Clean ABAP suggests that you eliminate prefixes, but for local classes it is very common.
 
 This example has prefixes:
 https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#call-local-test-classes-by-their-purpose
 
+For now not enabled.
+
 ### local_variable_names
 
-Enables you to enforce a pattern, such as a prefix, for local variables, constants and field symbols.
-Clean ABAP suggests that you eliminate prefixes.
+For now not enabled.
 
 ### method_parameter_names
 
 For now not enabled.
 
-`TODO check if negative lookbehinds are supported by the regex so common prefixes can be disallowed`
-
-
 ## Formatting
+
+Warning: 
+
+Enabling some of the formatting checks might lead to a lot of violations, as old editors reformat class headers and pretty printer only fixes most punctuation issues.
+Some of them can be draconic to maintain without proper tooling to fix the formatting, which might improve in the future.
+
+They are all disabled by default. enable them yourself according to your preferred conventions.
 
 ### keywords_upper
 
 Checks that keywords are in uppercase. Parameters allow to skip certain parts of code such as class definitions, which can be reformatted by SE80. 
 
-Enable it yourself if this is your preferred convention.
-
-### line_length
-
-Enabled by default. 120 is the perscribed preferable length:
-
-https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#stick-to-a-reasonable-line-length
-
-### if_in_if
-
-https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-the-nesting-depth-low
-
 ### line_only_punc
 
 Checks for lines containing only . or ).
-Enable it yourself if this is your preferred convention.
 
 ### colon_missing_space
 
-Checks for a missing space after a colon in chained statements.
+Checks for a missing space after a colon in chained statements. This is good indentation practice.
 
 Example:
 
@@ -240,16 +260,13 @@ WRITE:`abc`.
 WRITE: `abc`.
 ```
 
-This is correct indentation and is part of the clean variant.
-
 ### contains_tab
 
-Checks for tabs in your code. Enable it yourself if you want to enforce usage of spaces.
-
+Checks for tabs in your code. Enable if you want to enforce usage of spaces.
 
 ### double_space
 
-I think this ensures that there is a `single` space after certain keywords and parentheses. Good indentation practice, enabled.
+I think this ensures that there is a `single` space after certain keywords and parentheses. This is good indentation practice.
 
 List of keywords can be extended, see
 https://github.com/abaplint/abaplint//blob/ba4c6f8d03eb8d1a31c277d06c9d9cb9e7ad86b8/src/rules/whitespace/double_space.ts#L42
@@ -257,13 +274,13 @@ https://github.com/abaplint/abaplint//blob/ba4c6f8d03eb8d1a31c277d06c9d9cb9e7ad8
 
 ### whitespace_end
 
-Checks for whitespace at the end of a line.
+Checks for whitespace at the end of a line. This is good indentation practice, may lead to many errors.
 
 Enabled.
 
 ### in_statement_indentation
 
-Another check for redundant spacing. Enabled by default.
+Another check for redundant spacing.
 
 ### indentation
 
@@ -282,7 +299,7 @@ Enabled.
 
 Ensures code starts at tabstop positions.
 
-Disabled. Enable if you want to enforce tabs.
+Enable if you want to enforce tabs.
 
 ### space_before_colon
 
@@ -293,8 +310,6 @@ Disabled.
 ### space_before_dot
 
 `TODO Seems like many whitespace checks are for similar things.`
-
-Disabeld.
 
 
 ### empty_line_in_statement
