@@ -109,23 +109,6 @@
             "enabled": true,
             "exclude": []
         },
-        "object_naming": {
-            "enabled": true,
-            "exclude": [],
-            "clas": "^ZC(L|X)\\_",
-            "intf": "^ZIF\\_",
-            "prog": "^Z",
-            "fugr": "^Z",
-            "tabl": "^Z",
-            "ttyp": "^Z",
-            "dtel": "^Z",
-            "doma": "^Z",
-            "msag": "^Z",
-            "tran": "^Z",
-            "enqu": "^EZ",
-            "auth": "^Z",
-            "pinf": "^Z"
-        },
         "obsolete_statement": {
             "enabled": true,
             "exclude": [],

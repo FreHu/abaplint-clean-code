@@ -229,6 +229,12 @@ For now not enabled.
 
 For now not enabled.
 
+### object_naming
+
+Prefixes for object types.
+
+This differs per project. Not enabled by default.
+
 ## Formatting
 
 Warning: 
