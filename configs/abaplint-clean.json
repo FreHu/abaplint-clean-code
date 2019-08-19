@@ -154,11 +154,6 @@
                 "LE"
             ]
         },
-        "remove_descriptions": {
-            "enabled": true,
-            "exclude": [],
-            "ignoreExceptions": false
-        },
         "short_case": {
             "enabled": true,
             "exclude": [],
