@@ -19,6 +19,15 @@ Enforces that data and field-symbol definitions are on top of the method. While 
 
 Disabled.
 
+### no_public_attributes
+
+Checks for public attributes. 
+
+Not entirely compatible with Clean ABAP, which allows the `read-only` variant in some cases.
+https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#use-read-only-sparingly
+
+Disabled.
+
 ### unreachable code
 
 Checks for unreachable code - lines after a `RETURN`, `EXIT` or `RAISE`. Raising exceptions might have a few false positives.

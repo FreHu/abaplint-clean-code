@@ -105,10 +105,6 @@
             "exclude": [],
             "depth": 5
         },
-        "no_public_attributes": {
-            "enabled": true,
-            "exclude": []
-        },
         "obsolete_statement": {
             "enabled": true,
             "exclude": [],
