@@ -358,12 +358,6 @@ Disabled in clean variant since new systems have unicode support.
 
 Checks that a message class and id exists. Enabled by default.
 
-### description_empty
-
-Checks for empty descriptions in the abapgit xml metadata. While not part of abap, this helps ensure the consistency of your serialized files. 
-
-Enabled.
-
 ### identical_form_names
 
 Checks for identically named forms. Form usage is discouraged in general. Enabled by default.
@@ -384,12 +378,19 @@ Report abaplint failures. You should log these as issues on https://github.com/a
 
 Enabled
 
+### description_empty
+
+Checks for empty descriptions in the abapgit xml metadata. While not part of abap, this helps ensure the consistency of your serialized files. 
+
+Enabled.
 
 ### remove_descriptions
 
-`TODO Not sure of the purpose for this.`
+Ensures you have no descriptions in your metadata. This relates to methods, parameters, etc. For class descriptions, see [description_empty](#description_empty).
+The descriptions originate either from the form-based SE80 editor or if you use `shorttext synchronized` in abapdoc. 
+The abaplint philosophy is that you should just use `"!` because `shorttext synchronized` hurts readability.
 
-Disabled.
+Disabled because SAP wants you to use shorttext synchronized (although I agree with the readability issue).
 
 ### global_class
 
