@@ -1,5 +1,4 @@
 {
-    "$schema": "./../abaplint-schema.json",
     "global": {
         "version": "v753",
         "skipGeneratedGatewayClasses": true,
