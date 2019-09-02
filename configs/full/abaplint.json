@@ -1,11 +1,18 @@
 {
     "global": {
-        "version": "v753",
+        "files": "/src/**/*.*",
         "skipGeneratedGatewayClasses": true,
         "skipGeneratedPersistentClasses": true,
         "skipGeneratedFunctionGroups": true,
         "applyUnspecifiedRules": true
     },
+    "syntax": {
+        "version": "v753",
+        "errorNamespace": "",
+        "globalConstants": [],
+        "globalMacros": []
+    },
+    "dependencies": [],
     "rules": {
         "7bit_ascii": {
             "enabled": true,
@@ -223,7 +230,8 @@
             "tran": "^Z",
             "enqu": "^EZ",
             "auth": "^Z",
-            "pinf": "^Z"
+            "pinf": "^Z",
+            "idoc": "^Z"
         },
         "obsolete_statement": {
             "enabled": true,

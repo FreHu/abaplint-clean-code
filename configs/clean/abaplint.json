@@ -1,11 +1,18 @@
 {
     "global": {
-        "version": "v753",
+        "files": "/src/**/*.*",
         "skipGeneratedGatewayClasses": true,
         "skipGeneratedPersistentClasses": true,
         "skipGeneratedFunctionGroups": true,
         "applyUnspecifiedRules": false
     },
+    "syntax": {
+        "version": "v753",
+        "errorNamespace": "",
+        "globalConstants": [],
+        "globalMacros": []
+    },
+    "dependencies": [],
     "rules": {
         "avoid_use": {
             "enabled": true,
