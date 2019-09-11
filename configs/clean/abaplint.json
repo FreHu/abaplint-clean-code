@@ -15,8 +15,6 @@
     "dependencies": [],
     "rules": {
         "avoid_use": {
-            "enabled": true,
-            "exclude": [],
             "define": true,
             "endselect": true,
             "execSQL": true,
@@ -24,29 +22,12 @@
             "communication": true,
             "statics": true
         },
-        "breakpoint": {
-            "enabled": true,
-            "exclude": []
-        },
-        "commented_code": {
-            "enabled": true,
-            "exclude": []
-        },
-        "constructor_visibility_public": {
-            "enabled": true,
-            "exclude": []
-        },
-        "description_empty": {
-            "enabled": true,
-            "exclude": []
-        },
-        "empty_statement": {
-            "enabled": true,
-            "exclude": []
-        },
+        "breakpoint": {},
+        "commented_code": {},
+        "constructor_visibility_public": {},
+        "description_empty": {},
+        "empty_statement": {},
         "empty_structure": {
-            "enabled": true,
-            "exclude": [],
             "loop": true,
             "if": true,
             "while": true,
@@ -55,65 +36,28 @@
             "do": true,
             "at": true
         },
-        "exporting": {
-            "enabled": true,
-            "exclude": []
-        },
+        "exporting": {},
         "functional_writing": {
-            "enabled": true,
-            "exclude": [],
             "ignoreExceptions": true
         },
-        "global_class": {
-            "enabled": true,
-            "exclude": []
-        },
-        "identical_form_names": {
-            "enabled": true,
-            "exclude": []
-        },
-        "if_in_if": {
-            "enabled": true,
-            "exclude": []
-        },
-        "inline_data_old_versions": {
-            "enabled": true,
-            "exclude": []
-        },
+        "global_class": {},
+        "identical_form_names": {},
+        "if_in_if": {},
+        "inline_data_old_versions": {},
         "line_length": {
-            "enabled": true,
-            "exclude": [],
             "length": 120
         },
-        "max_one_statement": {
-            "enabled": true,
-            "exclude": []
-        },
-        "message_exists": {
-            "enabled": true,
-            "exclude": []
-        },
+        "max_one_statement": {},
+        "message_exists": {},
         "method_length": {
-            "enabled": true,
-            "exclude": [],
             "statements": 25
         },
-        "mix_returning": {
-            "enabled": true,
-            "exclude": []
-        },
-        "msag_consistency": {
-            "enabled": true,
-            "exclude": []
-        },
+        "mix_returning": {},
+        "msag_consistency": {},
         "nesting": {
-            "enabled": true,
-            "exclude": [],
             "depth": 5
         },
         "obsolete_statement": {
-            "enabled": true,
-            "exclude": [],
             "refresh": true,
             "compute": true,
             "add": true,
@@ -123,13 +67,8 @@
             "divide": true,
             "requested": true
         },
-        "parser_error": {
-            "enabled": true,
-            "exclude": []
-        },
+        "parser_error": {},
         "preferred_compare_operator": {
-            "enabled": true,
-            "exclude": [],
             "badOperators": [
                 "EQ",
                 "NE",
@@ -140,26 +79,12 @@
             ]
         },
         "short_case": {
-            "enabled": true,
-            "exclude": [],
             "length": 1,
             "allow": []
         },
-        "superclass_final": {
-            "enabled": true,
-            "exclude": []
-        },
-        "unreachable_code": {
-            "enabled": true,
-            "exclude": []
-        },
-        "use_new": {
-            "enabled": true,
-            "exclude": []
-        },
-        "when_others_last": {
-            "enabled": true,
-            "exclude": []
-        }
+        "superclass_final": {},
+        "unreachable_code": {},
+        "use_new": {},
+        "when_others_last": {}
     }
 }
