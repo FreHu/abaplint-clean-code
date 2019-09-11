@@ -1,5 +1,48 @@
 # Rule descriptions
 
+- [Rule descriptions](#rule-descriptions)
+  - [Code structure](#code-structure)
+    - [nesting](#nesting)
+    - [definitions_top](#definitions_top)
+    - [no_public_attributes](#no_public_attributes)
+    - [unreachable code](#unreachable-code)
+    - [when_others_last](#when_others_last)
+    - [exit_or_check](#exit_or_check)
+    - [constructor_visibility_public](#constructor_visibility_public)
+    - [short_case](#short_case)
+    - [max_one_statement](#max_one_statement)
+    - [method_length](#method_length)
+    - [if_in_if](#if_in_if)
+    - [line_length](#line_length)
+  - [Syntax/object usage](#syntaxobject-usage)
+    - [obsolete_statement](#obsolete_statement)
+    - [functional_writing](#functional_writing)
+    - [avoid_use](#avoid_use)
+    - [breakpoint](#breakpoint)
+    - [use_new](#use_new)
+    - [preferred_compare_operators](#preferred_compare_operators)
+    - [mix_returning](#mix_returning)
+    - [superclass_final](#superclass_final)
+    - [cloud_types](#cloud_types)
+    - [empty_statement](#empty_statement)
+  - [Other](#other)
+    - [7bit_ascii](#7bit_ascii)
+    - [check_variables](#check_variables)
+    - [tabl_enhancement_category](#tabl_enhancement_category)
+    - [ambiguous_statement](#ambiguous_statement)
+    - [message_exists](#message_exists)
+    - [identical_form_names](#identical_form_names)
+    - [msag_consistency](#msag_consistency)
+    - [parser_error](#parser_error)
+    - [description_empty](#description_empty)
+    - [remove_descriptions](#remove_descriptions)
+    - [global_class](#global_class)
+    - [begin_end_names](#begin_end_names)
+    - [check_transformation_exists](#check_transformation_exists)
+    - [implement_methods](#implement_methods)
+    - [local_testclass_location](#local_testclass_location)
+    - [main_file_contents](#main_file_contents)
+
 ## Code structure
 
 ### nesting
@@ -34,7 +77,6 @@ Checks for unreachable code - lines after a `RETURN`, `EXIT` or `RAISE`. Raising
 
 Enabled, please report false positives.
 
-
 ### when_others_last
 
 Checks that `WHEN OTHERS` is the last case of a switch statement.
@@ -43,9 +85,11 @@ Enabled.
 
 ### exit_or_check
 
-Checks for `EXIT` and `CHECK` statements outside of loops.
+Checks for `EXIT` and `CHECK` statements outside of loops. There is no consensus on whether you should use CHECK or RETURN to exit a method if the input doesn't meet expectations.
 
-`TODO I think clean abap allows check at the beginning. Disabled for now`
+https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#check-vs-return
+
+Disabled.
 
 ### constructor_visibility_public
 
@@ -65,6 +109,8 @@ Enabled, default 2.
 ### max_one_statement
 
 Checks that code only contains one statement per line. 
+
+https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#no-more-than-one-statement-per-line
 
 Enabled.
 
@@ -86,7 +132,7 @@ Enabled by default. 120 is the perscribed preferable length:
 
 https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#stick-to-a-reasonable-line-length
 
-## Syntax usage
+## Syntax/object usage
 
 ### obsolete_statement
 
@@ -175,11 +221,27 @@ Are not allowed.
 
 ```TODO make cloud ABAP variant as well```
 
+### allowed_object_types
+
+Allows to specify a whitelist of object types allowed in your package.
+
+Disabled.
+
 ### inline_data_old_versions
 
 Checks for inline data declarations in releases which are unavailable.
 
-`possibly this is redundant, as you can specify the language version`
+Enabled.
+
+### form_tables_obsolete
+
+Looks for `TABLES` parameters in forms. Usage of both forms and tables parameters is strongly discouraged in clean ABAP.
+
+Enabled.
+
+### type_form_parameters
+
+Looks for untyped form parameters. Usage of both forms and untyped parameters is strongly discouraged in clean ABAP.
 
 Enabled.
 
@@ -204,22 +266,20 @@ Enabled.
 
 Checks for EXPORTING statements which can be omitted from method calls.
 
+https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#omit-the-optional-keyword-exporting
+
 Enabled.
 
 ## Naming conventions
 
 Enables you to enforce a pattern, such as a prefix, for class, member and variable names.
-Clean ABAP suggests that you eliminate prefixes. This check should therefore be either disabled or configured in such a way that it reports prefixed variables instead.
-
-`TODO check if negative lookbehinds are supported by the regex so common prefixes can be disallowed`
+Clean ABAP suggests that you eliminate prefixes, therefore this check is disabled by default.
 
 ### class_attribute_names
 
 Class and global variables
 
-`TODO check if globals are sometimes recommended`
-
-For now not enabled.
+Disabled.
 
 ### local_class_naming
 
@@ -232,17 +292,17 @@ For now not enabled.
 
 ### local_variable_names
 
-For now not enabled.
+Disabled.
 
 ### method_parameter_names
 
-For now not enabled.
+Disabled.
 
 ### object_naming
 
-Prefixes for object types.
+Allows to define prefixes for object types. This differs per project. 
 
-This differs per project. Not enabled by default.
+Disabled.
 
 ## Formatting
 
@@ -291,76 +351,96 @@ https://github.com/abaplint/abaplint//blob/ba4c6f8d03eb8d1a31c277d06c9d9cb9e7ad8
 
 Checks for whitespace at the end of a line. This is good indentation practice, may lead to many errors.
 
-Enabled.
-
 ### in_statement_indentation
 
 Another check for redundant spacing.
 
 ### indentation
 
-`todo try out`
+Check indentation of nested blocks.
 
+Example violation:
+
+```abap
+    IF 1 = 2.
+  IF 3 = 4.
+  ENDIF.
+    ENDIF.
+```
 
 ### sequential_blank
 
 Checks for redundant spaces.
 
-`TODO might be duplicate with some other punctuation checks.`
-
-Enabled.
-
 ### start_at_tab
 
-Ensures code starts at tabstop positions.
-
-Enable if you want to enforce tabs.
+Ensures code starts at tabstop positions. Enable if you want to enforce tabs.
 
 ### space_before_colon
 
-`TODO There's also colon_missing_space. Duplicate?`
+Checks that there are no spaces in front of colons in chained statements.
 
-Disabled.
+Example violation:
+`write : 'a'`
 
 ### space_before_dot
 
-`TODO Seems like many whitespace checks are for similar things.`
-
+Checks for spaces before dots like `this .`
 
 ### empty_line_in_statement
 
-`TODO try this out`
+Checks for empty lines in statements. Example violation:
+
+```abap
+DATA(x) = y
+  
+.
+```
 
 ### empty_statement
 
-Sounds very much like empty_line_in_statement
+Checks for empty statements in your code. An empty statement is a single dot `.`.
 
-`TODO try this out`
+Enabled.
 
 ## Other
 
 ### 7bit_ascii
 
-Checks that your code contains only characters from the 7bit ASCII set. 
+Checks that your code contains only characters from the 7bit ASCII set. This practice should not be required on modern systems with unicode support.
 
-Disabled in clean variant since new systems have unicode support.
+Disabled.
 
 
 ### check_variables
 
-`TODO no idea what this does`
+Enables variable analysis (experimental).
+
+Enabled.
 
 ### tabl_enhancement_category
 
-`todo read up on this`
+Checks that tables do not have the enhancement category *not classified*.
+
+Enabled.
+
+### ambiguous_statement
+
+In some cases, the abaplint parser cannot tell whether a delete is performed on a database table or an internal table. Enabling the rule will force you to use more explicit syntax.
+
+Enabled.
 
 ### message_exists
 
-Checks that a message class and id exists. Enabled by default.
+Checks that a message class and id exists.
+
+Enabled.
 
 ### identical_form_names
 
-Checks for identically named forms. Form usage is discouraged in general. Enabled by default.
+Checks for identically named forms. Form usage is discouraged in general. 
+
+Enabled.
 
 
 ### msag_consistency
@@ -395,3 +475,37 @@ Disabled because SAP wants you to use shorttext synchronized (although I agree w
 ### global_class
 
 Mostly checks abapgit metadata for class names. The situations checked for are caused by code which can't be activated, but the rule is enabled for some extra validation.
+
+### begin_end_names
+
+Checks that names in the `begin of ...` and `end of ...` match. Code violating this rule is invalid.
+
+Enabled.
+
+### check_transformation_exists
+
+Validates that transformations called in your code exist.
+
+Enabled.
+
+### implement_methods
+
+Looks for abstract methods which are not yet implemented. Code violating this rule is invalid.
+
+Enabled.
+
+### local_testclass_location
+
+Validates that test classes are placed within the test include.
+
+Enabled.
+
+### main_file_contents
+
+Validations related to report definitions.
+
+- a report must have a name
+- a report must begin with `REPORT`
+- report name and filename must match
+
+Enabled.

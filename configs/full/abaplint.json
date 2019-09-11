@@ -176,6 +176,22 @@
         "unreachable_code": {},
         "use_new": {},
         "when_others_last": {},
-        "whitespace_end": {}
+        "whitespace_end": {},
+        "ambiguous_statement": {},
+        "allowed_object_types": {
+            "allowed": [
+                "PROG",
+                "CLAS",
+                "INTF",
+                "DEVC"
+            ]
+        },
+        "begin_end_names": {},
+        "check_transformation_exists": {},
+        "form_tables_obsolete": {},
+        "implement_methods": {},
+        "local_testclass_location": {},
+        "main_file_contents": {},
+        "type_form_parameters": {}
     }
 }

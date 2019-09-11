@@ -85,6 +85,15 @@
         "superclass_final": {},
         "unreachable_code": {},
         "use_new": {},
-        "when_others_last": {}
+        "when_others_last": {},
+        "ambiguous_statement": {},
+        "begin_end_names": {},
+        "check_transformation_exists": {},
+        "check_variables": {},
+        "form_tables_obsolete": {},
+        "tabl_enhancement_category": {},
+        "implement_methods": {},
+        "local_testclass_location": {},
+        "main_file_contents": {}
     }
 }
