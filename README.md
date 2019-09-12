@@ -1,6 +1,12 @@
 # abaplint-clean-code
-Abaplint definitions according to ABAP clean code guidelines
 
-Note that this is work in progress and not a finished thing. Parts of the repo such as the schema might be contributed elsewhere over time if it makes sense.
+Abaplint rule overview and definitions according to ABAP clean code guidelines.
 
-[abaplint rules](./rules.md)
+[rule overview](./rules.md)
+[clean config](./configs/clean/abaplint.json) - rules are picked in an attempt to match the Clean ABAP styleguide.
+[full config](./configs/full/abaplint.json) - example of config with every rule included
+
+You can also find about the list of rules interactively by editing your `abaplint.json` using vscode. The abaplint plugin provides validation and autocompletion according to the [schema](https://schema.abaplint.org/schema.json) which is generated automatically from docstrings in the code.
+
+
+![vscode schema autocomplete](./autocompletion.png)

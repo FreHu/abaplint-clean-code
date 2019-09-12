@@ -1,47 +1,75 @@
 # Rule descriptions
-
 - [Rule descriptions](#rule-descriptions)
   - [Code structure](#code-structure)
     - [nesting](#nesting)
-    - [definitions_top](#definitions_top)
-    - [no_public_attributes](#no_public_attributes)
+    - [definitions_top](#definitionstop)
+    - [no_public_attributes](#nopublicattributes)
     - [unreachable code](#unreachable-code)
-    - [when_others_last](#when_others_last)
-    - [exit_or_check](#exit_or_check)
-    - [constructor_visibility_public](#constructor_visibility_public)
-    - [short_case](#short_case)
-    - [max_one_statement](#max_one_statement)
-    - [method_length](#method_length)
-    - [if_in_if](#if_in_if)
-    - [line_length](#line_length)
+    - [when_others_last](#whenotherslast)
+    - [exit_or_check](#exitorcheck)
+    - [constructor_visibility_public](#constructorvisibilitypublic)
+    - [short_case](#shortcase)
+    - [max_one_statement](#maxonestatement)
+    - [method_length](#methodlength)
+    - [if_in_if](#ifinif)
+    - [line_length](#linelength)
   - [Syntax/object usage](#syntaxobject-usage)
-    - [obsolete_statement](#obsolete_statement)
-    - [functional_writing](#functional_writing)
-    - [avoid_use](#avoid_use)
+    - [obsolete_statement](#obsoletestatement)
+    - [functional_writing](#functionalwriting)
+    - [avoid_use](#avoiduse)
     - [breakpoint](#breakpoint)
-    - [use_new](#use_new)
-    - [preferred_compare_operators](#preferred_compare_operators)
-    - [mix_returning](#mix_returning)
-    - [superclass_final](#superclass_final)
-    - [cloud_types](#cloud_types)
-    - [empty_statement](#empty_statement)
+    - [use_new](#usenew)
+    - [preferred_compare_operators](#preferredcompareoperators)
+    - [mix_returning](#mixreturning)
+    - [superclass_final](#superclassfinal)
+    - [cloud_types](#cloudtypes)
+    - [allowed_object_types](#allowedobjecttypes)
+    - [inline_data_old_versions](#inlinedataoldversions)
+    - [form_tables_obsolete](#formtablesobsolete)
+    - [type_form_parameters](#typeformparameters)
+  - [Redundant code](#redundant-code)
+    - [commented_code](#commentedcode)
+    - [empty_structure](#emptystructure)
+    - [exporting](#exporting)
+  - [Naming conventions](#naming-conventions)
+    - [class_attribute_names](#classattributenames)
+    - [local_class_naming](#localclassnaming)
+    - [local_variable_names](#localvariablenames)
+    - [method_parameter_names](#methodparameternames)
+    - [object_naming](#objectnaming)
+  - [Formatting](#formatting)
+    - [keywords_upper](#keywordsupper)
+    - [line_only_punc](#lineonlypunc)
+    - [colon_missing_space](#colonmissingspace)
+    - [contains_tab](#containstab)
+    - [double_space](#doublespace)
+    - [whitespace_end](#whitespaceend)
+    - [in_statement_indentation](#instatementindentation)
+    - [indentation](#indentation)
+    - [sequential_blank](#sequentialblank)
+    - [start_at_tab](#startattab)
+    - [space_before_colon](#spacebeforecolon)
+    - [space_before_dot](#spacebeforedot)
+    - [empty_line_in_statement](#emptylineinstatement)
+    - [empty_statement](#emptystatement)
   - [Other](#other)
-    - [7bit_ascii](#7bit_ascii)
-    - [check_variables](#check_variables)
-    - [tabl_enhancement_category](#tabl_enhancement_category)
-    - [ambiguous_statement](#ambiguous_statement)
-    - [message_exists](#message_exists)
-    - [identical_form_names](#identical_form_names)
-    - [msag_consistency](#msag_consistency)
-    - [parser_error](#parser_error)
-    - [description_empty](#description_empty)
-    - [remove_descriptions](#remove_descriptions)
-    - [global_class](#global_class)
-    - [begin_end_names](#begin_end_names)
-    - [check_transformation_exists](#check_transformation_exists)
-    - [implement_methods](#implement_methods)
-    - [local_testclass_location](#local_testclass_location)
-    - [main_file_contents](#main_file_contents)
+    - [7bit_ascii](#7bitascii)
+    - [check_variables](#checkvariables)
+    - [tabl_enhancement_category](#tablenhancementcategory)
+    - [ambiguous_statement](#ambiguousstatement)
+    - [message_exists](#messageexists)
+    - [identical_form_names](#identicalformnames)
+    - [msag_consistency](#msagconsistency)
+    - [parser_error](#parsererror)
+    - [description_empty](#descriptionempty)
+    - [remove_descriptions](#removedescriptions)
+    - [global_class](#globalclass)
+    - [begin_end_names](#beginendnames)
+    - [check_transformation_exists](#checktransformationexists)
+    - [implement_methods](#implementmethods)
+    - [local_testclass_location](#localtestclasslocation)
+    - [main_file_contents](#mainfilecontents)
+    - [rfc_error_handling](#rfcerrorhandling)
 
 ## Code structure
 
@@ -58,13 +86,13 @@ Enabled.
 
 ### definitions_top
 
-Enforces that data and field-symbol definitions are on top of the method. While sometimes good for readability, it is an antipattern as variables should be declared inline or close to their first declaration. 
+Enforces that data and field-symbol definitions are on top of the method. While sometimes good for readability, it is an antipattern as variables should be declared inline or close to their first declaration.
 
 Disabled.
 
 ### no_public_attributes
 
-Checks for public attributes. 
+Checks for public attributes.
 
 Not entirely compatible with Clean ABAP, which allows the `read-only` variant in some cases.
 https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#use-read-only-sparingly
@@ -108,7 +136,7 @@ Enabled, default 2.
 
 ### max_one_statement
 
-Checks that code only contains one statement per line. 
+Checks that code only contains one statement per line.
 
 https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#no-more-than-one-statement-per-line
 
@@ -142,7 +170,7 @@ Enabled.
 
 ### functional_writing
 
-Checks that method calls use the functional `method()` style instead of `CALL METHOD method` if possible. 
+Checks that method calls use the functional `method()` style instead of `CALL METHOD method` if possible.
 
 Enabled.
 
@@ -154,12 +182,10 @@ Currently supported:
 
 - define (clean abap rule - no macros)
 - endselect
-- execSQL 
+- execSQL
 - kernel call
 - communication
 - statics (probably a clean abap rule)
-
-`TODO this is easy to extend, check for other statements which could be added`
 
 Enabled.
 
@@ -201,7 +227,7 @@ Enabled.
 
 Checks for object types incompatible with Cloud ABAP.
 
-Types that are not 
+Types that are not
 
         Class
         Interface
@@ -219,7 +245,7 @@ Types that are not
 
 Are not allowed.
 
-```TODO make cloud ABAP variant as well```
+`TODO make cloud ABAP variant as well`
 
 ### allowed_object_types
 
@@ -249,7 +275,7 @@ Enabled.
 
 ### commented_code
 
-Checks for commented out code. You should not generally leave commented out code so it is good that you are warned about it. 
+Checks for commented out code. You should not generally leave commented out code so it is good that you are warned about it.
 
 Enabled.
 
@@ -300,22 +326,24 @@ Disabled.
 
 ### object_naming
 
-Allows to define prefixes for object types. This differs per project. 
+Allows to define prefixes for object types. This differs per project.
 
 Disabled.
 
 ## Formatting
 
-Warning: 
+Warning:
 
 Enabling some of the formatting checks might lead to a lot of violations, as old editors reformat class headers and pretty printer only fixes most punctuation issues.
 Some of them can be draconic to maintain without proper tooling to fix the formatting, which might improve in the future.
 
-They are all disabled by default. enable them yourself according to your preferred conventions.
+The clean code config enables by default the rules which shouldn't be common enough to cause too many violations.
+
+Enable more of them yourself according to your preferred conventions.
 
 ### keywords_upper
 
-Checks that keywords are in uppercase. Parameters allow to skip certain parts of code such as class definitions, which can be reformatted by SE80. 
+Checks that keywords are in uppercase. Parameters allow to skip certain parts of code such as class definitions, which can be reformatted by SE80.
 
 ### line_only_punc
 
@@ -353,11 +381,18 @@ Checks for whitespace at the end of a line. This is good indentation practice, m
 
 ### in_statement_indentation
 
-Another check for redundant spacing.
+Checks alignment within block statement declarations which span multiple lines, such as multiple conditions in IF statements.
+
+Example violation:
+``` abap
+IF 1 = 1 AND
+           2 = 2.
+ENDIF.
+```
 
 ### indentation
 
-Check indentation of nested blocks.
+Check indentation of nested blocks. Clean code should definitely be well indented.
 
 Example violation:
 
@@ -368,9 +403,13 @@ Example violation:
     ENDIF.
 ```
 
+Enabled.
+
 ### sequential_blank
 
-Checks for redundant spaces.
+Checks for multiple successive blank lines in code. The maximium allowed number is configurable.
+
+Enabled.
 
 ### start_at_tab
 
@@ -385,7 +424,7 @@ Example violation:
 
 ### space_before_dot
 
-Checks for spaces before dots like `this .`
+Checks for spaces before dots like `this .` These are quite common in class definitions generated by SE80.
 
 ### empty_line_in_statement
 
@@ -393,13 +432,22 @@ Checks for empty lines in statements. Example violation:
 
 ```abap
 DATA(x) = y
-  
+
 .
 ```
+
+The `allowChained` parameter can be used to disable the check in chained statements.
+
+
+This should be a very rare formatting issue.
+
+Enabled for non-chained statements.
 
 ### empty_statement
 
 Checks for empty statements in your code. An empty statement is a single dot `.`.
+
+This should be a very rare formatting issue.
 
 Enabled.
 
@@ -438,7 +486,7 @@ Enabled.
 
 ### identical_form_names
 
-Checks for identically named forms. Form usage is discouraged in general. 
+Checks for identically named forms. Form usage is discouraged in general.
 
 Enabled.
 
@@ -460,21 +508,21 @@ Enabled
 
 ### description_empty
 
-Checks for empty descriptions in the abapgit xml metadata. While not part of abap, this helps ensure the consistency of your serialized files. 
+Checks for empty descriptions in the abapGit xml metadata. While not part of abap, this helps ensure the consistency of your serialized files.
 
 Enabled.
 
 ### remove_descriptions
 
 Ensures you have no descriptions in your metadata. This relates to methods, parameters, etc. For class descriptions, see [description_empty](#description_empty).
-The descriptions originate either from the form-based SE80 editor or if you use `shorttext synchronized` in abapdoc. 
+The descriptions originate either from the form-based SE80 editor or if you use `shorttext synchronized` in abapdoc.
 The abaplint philosophy is that you should just use `"!` because `shorttext synchronized` hurts readability.
 
 Disabled because SAP wants you to use shorttext synchronized (although I agree with the readability issue).
 
 ### global_class
 
-Mostly checks abapgit metadata for class names. The situations checked for are caused by code which can't be activated, but the rule is enabled for some extra validation.
+Mostly checks abapGit metadata for class names. The situations checked for are caused by code which can't be activated, but the rule is enabled for some extra validation.
 
 ### begin_end_names
 
@@ -509,3 +557,18 @@ Validations related to report definitions.
 - report name and filename must match
 
 Enabled.
+
+
+### rfc_error_handling
+
+Checks that exceptions 'resource_failure' 'system_failure' and 'communication_failure' are handled in RFC calls.
+
+Correct handling example:
+
+```abap
+CALL FUNCTION 'FOO' DESTINATION 'BAR'
+      EXCEPTIONS
+        system_failure        = 1 MESSAGE lv_msg
+        communication_failure = 2 MESSAGE lv_msg
+        resource_failure      = 3.`
+````

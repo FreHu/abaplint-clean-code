@@ -94,6 +94,20 @@
         "tabl_enhancement_category": {},
         "implement_methods": {},
         "local_testclass_location": {},
-        "main_file_contents": {}
+        "main_file_contents": {},
+        "rfc_error_handling": {},
+        "indentation": {
+            "alignTryCatch": false,
+            "ignoreExceptions": false,
+            "globalClassSkipFirst": false,
+            "ignoreGlobalClassDefinition": false,
+            "ignoreGlobalInterface": false
+        },
+        "sequential_blank": {
+            "lines": 3
+        },
+        "empty_line_in_statement": {
+            "allowChained": true
+        }
     }
 }

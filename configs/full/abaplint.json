@@ -192,6 +192,7 @@
         "implement_methods": {},
         "local_testclass_location": {},
         "main_file_contents": {},
-        "type_form_parameters": {}
+        "type_form_parameters": {},
+        "rfc_error_handling": {}
     }
 }
