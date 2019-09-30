@@ -20,7 +20,7 @@
         }
     ],
     "rules": {
-        "7bit_ascii": {},
+        "7bit_ascii": true,
         "avoid_use": {
             "define": true,
             "endselect": true,
@@ -29,22 +29,22 @@
             "communication": true,
             "statics": true
         },
-        "breakpoint": {},
-        "check_variables": {},
+        "breakpoint": true,
+        "check_variables": true,
         "class_attribute_names": {
             "ignoreExceptions": true,
             "statics": "^G._.*$",
             "instance": "^M._.*$"
         },
-        "cloud_types": {},
-        "colon_missing_space": {},
-        "commented_code": {},
+        "cloud_types": true,
+        "colon_missing_space": true,
+        "commented_code": true,
         "constructor_visibility_public": {
             "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#if-your-global-class-is-create-private-leave-the-constructor-public"
         },
-        "contains_tab": {},
-        "definitions_top": {},
-        "description_empty": {},
+        "contains_tab": true,
+        "definitions_top": true,
+        "description_empty": true,
         "double_space": {
             "keywords": true,
             "startParen": true,
@@ -53,7 +53,7 @@
         "empty_line_in_statement": {
             "allowChained": false
         },
-        "empty_statement": {},
+        "empty_statement": true,
         "empty_structure": {
             "loop": true,
             "if": true,
@@ -63,15 +63,15 @@
             "do": true,
             "at": true
         },
-        "exit_or_check": {},
+        "exit_or_check": true,
         "exporting": {
             "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#omit-the-optional-keyword-exporting"
         },
         "functional_writing": {
             "ignoreExceptions": true
         },
-        "global_class": {},
-        "identical_form_names": {},
+        "global_class": true,
+        "identical_form_names": true,
         "if_in_if": {
             "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-the-nesting-depth-low"
         },
@@ -85,7 +85,7 @@
             "ignoreGlobalClassDefinition": false,
             "ignoreGlobalInterface": false
         },
-        "inline_data_old_versions": {},
+        "inline_data_old_versions": true,
         "keywords_upper": {
             "ignoreExceptions": true,
             "ignoreLowerClassImplmentationStatement": true,
@@ -112,7 +112,7 @@
         "max_one_statement": {
             "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#no-more-than-one-statement-per-line"
         },
-        "message_exists": {},
+        "message_exists": true,
         "method_length": {
             "statements": 100,
             "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-methods-small"
@@ -130,7 +130,7 @@
         "mix_returning": {
             "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#use-either-returning-or-exporting-or-changing-but-not-a-combination"
         },
-        "msag_consistency": {},
+        "msag_consistency": true,
         "nesting": {
             "depth": 5,
             "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-the-nesting-depth-low"
@@ -164,7 +164,7 @@
             "divide": true,
             "requested": true
         },
-        "parser_error": {},
+        "parser_error": true,
         "preferred_compare_operator": {
             "badOperators": [
                 "EQ",
@@ -186,19 +186,19 @@
             "length": 1,
             "allow": []
         },
-        "space_before_colon": {},
+        "space_before_colon": true,
         "space_before_dot": {
             "ignoreGlobalDefinition": true,
             "ignoreExceptions": true
         },
-        "start_at_tab": {},
-        "superclass_final": {},
-        "tabl_enhancement_category": {},
-        "unreachable_code": {},
-        "use_new": {},
-        "when_others_last": {},
-        "whitespace_end": {},
-        "ambiguous_statement": {},
+        "start_at_tab": true,
+        "superclass_final": true,
+        "tabl_enhancement_category": true,
+        "unreachable_code": true,
+        "use_new": true,
+        "when_others_last": true,
+        "whitespace_end": true,
+        "ambiguous_statement": true,
         "allowed_object_types": {
             "allowed": [
                 "PROG",
@@ -207,13 +207,13 @@
                 "DEVC"
             ]
         },
-        "begin_end_names": {},
-        "check_transformation_exists": {},
-        "form_tables_obsolete": {},
-        "implement_methods": {},
-        "local_testclass_location": {},
-        "main_file_contents": {},
-        "type_form_parameters": {},
-        "rfc_error_handling": {}
+        "begin_end_names": true,
+        "check_transformation_exists": true,
+        "form_tables_obsolete": true,
+        "implement_methods": true,
+        "local_testclass_location": true,
+        "main_file_contents": true,
+        "type_form_parameters": true,
+        "rfc_error_handling": true
     }
 }
