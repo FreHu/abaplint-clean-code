@@ -12,7 +12,13 @@
         "globalConstants": [],
         "globalMacros": []
     },
-    "dependencies": [],
+    "dependencies": [
+        {
+            "url": "https://github.com/abaplint/deps",
+            "folder": "/deps",
+            "files": "/src/**/*.*"
+        }
+    ],
     "rules": {
         "7bit_ascii": {},
         "avoid_use": {
