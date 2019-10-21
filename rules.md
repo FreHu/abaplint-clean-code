@@ -2,74 +2,78 @@
 - [Rule descriptions](#rule-descriptions)
   - [Code structure](#code-structure)
     - [nesting](#nesting)
-    - [definitions_top](#definitionstop)
-    - [no_public_attributes](#nopublicattributes)
+    - [definitions_top](#definitions_top)
+    - [no_public_attributes](#no_public_attributes)
     - [unreachable code](#unreachable-code)
-    - [when_others_last](#whenotherslast)
-    - [exit_or_check](#exitorcheck)
-    - [constructor_visibility_public](#constructorvisibilitypublic)
-    - [short_case](#shortcase)
-    - [max_one_statement](#maxonestatement)
-    - [method_length](#methodlength)
-    - [if_in_if](#ifinif)
-    - [line_length](#linelength)
+    - [when_others_last](#when_others_last)
+    - [exit_or_check](#exit_or_check)
+    - [constructor_visibility_public](#constructor_visibility_public)
+    - [short_case](#short_case)
+    - [max_one_statement](#max_one_statement)
+    - [method_length](#method_length)
+    - [if_in_if](#if_in_if)
+    - [line_length](#line_length)
+  - [Documentation](#documentation)
+    - [abapdoc](#abapdoc)
   - [Syntax/object usage](#syntaxobject-usage)
-    - [obsolete_statement](#obsoletestatement)
-    - [functional_writing](#functionalwriting)
-    - [avoid_use](#avoiduse)
+    - [obsolete_statement](#obsolete_statement)
+    - [functional_writing](#functional_writing)
+    - [avoid_use](#avoid_use)
     - [breakpoint](#breakpoint)
-    - [use_new](#usenew)
-    - [preferred_compare_operators](#preferredcompareoperators)
-    - [mix_returning](#mixreturning)
-    - [superclass_final](#superclassfinal)
-    - [cloud_types](#cloudtypes)
-    - [allowed_object_types](#allowedobjecttypes)
-    - [inline_data_old_versions](#inlinedataoldversions)
-    - [form_tables_obsolete](#formtablesobsolete)
-    - [type_form_parameters](#typeformparameters)
+    - [use_new](#use_new)
+    - [preferred_compare_operators](#preferred_compare_operators)
+    - [mix_returning](#mix_returning)
+    - [superclass_final](#superclass_final)
+    - [cloud_types](#cloud_types)
+    - [allowed_object_types](#allowed_object_types)
+    - [inline_data_old_versions](#inline_data_old_versions)
+    - [form_tables_obsolete](#form_tables_obsolete)
+    - [type_form_parameters](#type_form_parameters)
   - [Redundant code](#redundant-code)
-    - [commented_code](#commentedcode)
-    - [empty_structure](#emptystructure)
+    - [commented_code](#commented_code)
+    - [empty_structure](#empty_structure)
     - [exporting](#exporting)
   - [Naming conventions](#naming-conventions)
-    - [class_attribute_names](#classattributenames)
-    - [local_class_naming](#localclassnaming)
-    - [local_variable_names](#localvariablenames)
-    - [method_parameter_names](#methodparameternames)
-    - [object_naming](#objectnaming)
+    - [class_attribute_names](#class_attribute_names)
+    - [local_class_naming](#local_class_naming)
+    - [local_variable_names](#local_variable_names)
+    - [method_parameter_names](#method_parameter_names)
+    - [object_naming](#object_naming)
+    - [form_no_dash](#form_no_dash)
   - [Formatting](#formatting)
-    - [keywords_upper](#keywordsupper)
-    - [line_only_punc](#lineonlypunc)
-    - [colon_missing_space](#colonmissingspace)
-    - [contains_tab](#containstab)
-    - [double_space](#doublespace)
-    - [whitespace_end](#whitespaceend)
-    - [in_statement_indentation](#instatementindentation)
+    - [keywords_upper](#keywords_upper)
+    - [line_only_punc](#line_only_punc)
+    - [colon_missing_space](#colon_missing_space)
+    - [contains_tab](#contains_tab)
+    - [double_space](#double_space)
+    - [whitespace_end](#whitespace_end)
+    - [in_statement_indentation](#in_statement_indentation)
     - [indentation](#indentation)
-    - [sequential_blank](#sequentialblank)
-    - [start_at_tab](#startattab)
-    - [space_before_colon](#spacebeforecolon)
-    - [space_before_dot](#spacebeforedot)
-    - [empty_line_in_statement](#emptylineinstatement)
-    - [empty_statement](#emptystatement)
+    - [sequential_blank](#sequential_blank)
+    - [start_at_tab](#start_at_tab)
+    - [space_before_colon](#space_before_colon)
+    - [space_before_dot](#space_before_dot)
+    - [empty_line_in_statement](#empty_line_in_statement)
+    - [empty_statement](#empty_statement)
   - [Other](#other)
-    - [7bit_ascii](#7bitascii)
-    - [check_variables](#checkvariables)
-    - [tabl_enhancement_category](#tablenhancementcategory)
-    - [ambiguous_statement](#ambiguousstatement)
-    - [message_exists](#messageexists)
-    - [identical_form_names](#identicalformnames)
-    - [msag_consistency](#msagconsistency)
-    - [parser_error](#parsererror)
-    - [description_empty](#descriptionempty)
-    - [remove_descriptions](#removedescriptions)
-    - [global_class](#globalclass)
-    - [begin_end_names](#beginendnames)
-    - [check_transformation_exists](#checktransformationexists)
-    - [implement_methods](#implementmethods)
-    - [local_testclass_location](#localtestclasslocation)
-    - [main_file_contents](#mainfilecontents)
-    - [rfc_error_handling](#rfcerrorhandling)
+    - [7bit_ascii](#7bit_ascii)
+    - [check_variables](#check_variables)
+    - [tabl_enhancement_category](#tabl_enhancement_category)
+    - [ambiguous_statement](#ambiguous_statement)
+    - [message_exists](#message_exists)
+    - [identical_form_names](#identical_form_names)
+    - [msag_consistency](#msag_consistency)
+    - [parser_error](#parser_error)
+    - [description_empty](#description_empty)
+    - [remove_descriptions](#remove_descriptions)
+    - [global_class](#global_class)
+    - [begin_end_names](#begin_end_names)
+    - [check_transformation_exists](#check_transformation_exists)
+    - [implement_methods](#implement_methods)
+    - [local_testclass_location](#local_testclass_location)
+    - [main_file_contents](#main_file_contents)
+    - [rfc_error_handling](#rfc_error_handling)
+    - [release_idoc](#release_idoc)
 
 ## Code structure
 
@@ -147,6 +151,8 @@ Enabled.
 
 https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-methods-small says 3-5 statements, which would raise a lot of violations. The number 25 is also used often (fits within one screen), for now I am using it a a sane max limit.
 
+Also checks for empty methods if `errorWhenEmpty` is set to true.
+
 Enabled.
 
 ### if_in_if
@@ -159,6 +165,12 @@ https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-the-
 Enabled by default. 120 is the perscribed preferable length:
 
 https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#stick-to-a-reasonable-line-length
+
+## Documentation
+
+### abapdoc
+
+Require abapdoc comments for public methods and properties.
 
 ## Syntax/object usage
 
@@ -329,6 +341,12 @@ Disabled.
 Allows to define prefixes for object types. This differs per project.
 
 Disabled.
+
+### form_no_dash
+
+Checks for a dash `-` in form names. Usage of dashes in names is heavily discouraged.
+
+Enabled.
 
 ## Formatting
 
@@ -572,3 +590,7 @@ CALL FUNCTION 'FOO' DESTINATION 'BAR'
         communication_failure = 2 MESSAGE lv_msg
         resource_failure      = 3.`
 ````
+
+### release_idoc
+
+Checks idoc types and segments are set to status released

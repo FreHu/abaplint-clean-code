@@ -115,7 +115,8 @@
         "message_exists": true,
         "method_length": {
             "statements": 100,
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-methods-small"
+            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-methods-small",
+            "errorWhenEmpty": true
         },
         "method_parameter_names": {
             "ignoreExceptions": true,
@@ -214,6 +215,9 @@
         "local_testclass_location": true,
         "main_file_contents": true,
         "type_form_parameters": true,
-        "rfc_error_handling": true
+        "rfc_error_handling": true,
+        "abapdoc": true,
+        "form_no_dash": true,
+        "release_idoc": true
     }
 }

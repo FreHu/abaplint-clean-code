@@ -66,6 +66,7 @@
         "message_exists": true,
         "method_length": {
             "statements": 25,
+            "errorWhenEmpty": true,
             "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-methods-small"
         },
         "mix_returning": {
@@ -127,6 +128,7 @@
         },
         "empty_line_in_statement": {
             "allowChained": true
-        }
+        },
+        "form_no_dash": true
     }
 }
