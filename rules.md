@@ -57,7 +57,7 @@
     - [empty_statement](#empty_statement)
   - [Other](#other)
     - [7bit_ascii](#7bit_ascii)
-    - [check_variables](#check_variables)
+    - [check_syntax](#check_syntax)
     - [tabl_enhancement_category](#tabl_enhancement_category)
     - [ambiguous_statement](#ambiguous_statement)
     - [message_exists](#message_exists)
@@ -74,6 +74,7 @@
     - [main_file_contents](#main_file_contents)
     - [rfc_error_handling](#rfc_error_handling)
     - [release_idoc](#release_idoc)
+    - [check_abstract](#check_abstract)
 
 ## Code structure
 
@@ -98,10 +99,7 @@ Disabled.
 
 Checks for public attributes.
 
-Not entirely compatible with Clean ABAP, which allows the `read-only` variant in some cases.
-https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#use-read-only-sparingly
-
-Disabled.
+Enabled (read-only is allowed).
 
 ### unreachable code
 
@@ -478,7 +476,7 @@ Checks that your code contains only characters from the 7bit ASCII set. This pra
 Disabled.
 
 
-### check_variables
+### check_syntax
 
 Enables variable analysis (experimental).
 
@@ -588,9 +586,18 @@ CALL FUNCTION 'FOO' DESTINATION 'BAR'
       EXCEPTIONS
         system_failure        = 1 MESSAGE lv_msg
         communication_failure = 2 MESSAGE lv_msg
-        resource_failure      = 3.`
-````
+        resource_failure      = 3.
+```
 
 ### release_idoc
 
 Checks idoc types and segments are set to status released
+
+### check_abstract 
+
+Checks that 
+
+- no class is abstract + final 
+- non-abstract classes do not contain abstract methods
+
+Enabled.

@@ -30,7 +30,7 @@
             "statics": true
         },
         "breakpoint": true,
-        "check_variables": true,
+        "check_syntax": true,
         "class_attribute_names": {
             "ignoreExceptions": true,
             "statics": "^G._.*$",
@@ -137,6 +137,7 @@
             "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-the-nesting-depth-low"
         },
         "no_public_attributes": {
+            "allowReadOnly": true,
             "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#use-read-only-sparingly"
         },
         "object_naming": {
@@ -163,7 +164,8 @@
             "multiply": true,
             "move": true,
             "divide": true,
-            "requested": true
+            "requested": true,
+            "occurs": true
         },
         "parser_error": true,
         "preferred_compare_operator": {

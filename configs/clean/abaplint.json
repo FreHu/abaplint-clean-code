@@ -85,7 +85,8 @@
             "multiply": true,
             "move": true,
             "divide": true,
-            "requested": true
+            "requested": true,
+            "occurs": true
         },
         "parser_error": true,
         "preferred_compare_operator": {
@@ -109,7 +110,7 @@
         "ambiguous_statement": true,
         "begin_end_names": true,
         "check_transformation_exists": true,
-        "check_variables": true,
+        "check_syntax": true,
         "form_tables_obsolete": true,
         "tabl_enhancement_category": true,
         "implement_methods": true,
@@ -129,6 +130,10 @@
         "empty_line_in_statement": {
             "allowChained": true
         },
-        "form_no_dash": true
+        "form_no_dash": true,
+        "check_abstract": true,
+        "no_public_attributes": {
+            "allowReadOnly": true
+        }
     }
 }
