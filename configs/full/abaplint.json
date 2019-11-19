@@ -86,7 +86,8 @@
             "ignoreGlobalInterface": false
         },
         "inline_data_old_versions": true,
-        "keywords_upper": {
+        "keyword_case": {
+            "style": "upper",
             "ignoreExceptions": true,
             "ignoreLowerClassImplmentationStatement": true,
             "ignoreGlobalClassDefinition": false,
@@ -115,6 +116,7 @@
         "message_exists": true,
         "method_length": {
             "statements": 100,
+            "ignoreTestClasses": false,
             "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-methods-small",
             "errorWhenEmpty": true
         },

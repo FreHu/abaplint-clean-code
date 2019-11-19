@@ -66,6 +66,7 @@
         "message_exists": true,
         "method_length": {
             "statements": 25,
+            "ignoreTestClasses": false,
             "errorWhenEmpty": true,
             "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-methods-small"
         },
@@ -134,6 +135,7 @@
         "check_abstract": true,
         "no_public_attributes": {
             "allowReadOnly": true
-        }
+        },
+        "abapdoc": true
     }
 }
