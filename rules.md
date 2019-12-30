@@ -13,6 +13,7 @@
     - [method_length](#methodlength)
     - [if_in_if](#ifinif)
     - [line_length](#linelength)
+    - [prefer_returning_to_exporting](#preferreturningtoexporting)
   - [Documentation](#documentation)
     - [abapdoc](#abapdoc)
   - [Syntax/object usage](#syntaxobject-usage)
@@ -55,6 +56,7 @@
     - [space_before_dot](#spacebeforedot)
     - [empty_line_in_statement](#emptylineinstatement)
     - [empty_statement](#emptystatement)
+    - [keep_single_parameter_on_one_line](#keepsingleparameterononeline)
   - [Other](#other)
     - [7bit_ascii](#7bitascii)
     - [check_syntax](#checksyntax)
@@ -165,6 +167,14 @@ https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-the-
 Enabled by default. 120 is the perscribed preferable length:
 
 https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#stick-to-a-reasonable-line-length
+
+### prefer_returning_to_exporting
+
+Checks for `exporting` parameters which can be turned into `returning`.
+
+https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#prefer-returning-to-exporting
+
+Enabled.
 
 ## Documentation
 
@@ -468,6 +478,25 @@ Checks for empty statements in your code. An empty statement is a single dot `.`
 This should be a very rare formatting issue.
 
 Enabled.
+
+### keep_single_parameter_on_one_line
+
+Checks for single parameter method calls which are not in a single line.
+
+The paramter `length` can be used to suppress the warning for long lines.
+
+Good example
+
+```
+cl_foo=>bar( x = 5 ).
+```
+
+Bad example
+
+```
+cl_foo=>bar(
+    x = 5 ).
+```
 
 ## Other
 

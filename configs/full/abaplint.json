@@ -226,6 +226,10 @@
         "rfc_error_handling": true,
         "abapdoc": true,
         "form_no_dash": true,
-        "release_idoc": true
+        "release_idoc": true,
+        "prefer_returning_to_exporting": true,
+        "keep_single_parameter_on_one_line": {
+            "length": 120
+        }
     }
 }

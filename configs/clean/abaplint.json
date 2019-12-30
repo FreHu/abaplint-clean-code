@@ -26,7 +26,8 @@
             "execSQL": true,
             "kernelCall": true,
             "communication": true,
-            "statics": true
+            "statics": true,
+            "systemCall": true
         },
         "breakpoint": true,
         "commented_code": true,
@@ -136,6 +137,10 @@
         "no_public_attributes": {
             "allowReadOnly": true
         },
-        "abapdoc": true
+        "abapdoc": true,
+        "prefer_returning_to_exporting": true,
+        "keep_single_parameter_on_one_line": {
+            "length": 120
+        }
     }
 }
