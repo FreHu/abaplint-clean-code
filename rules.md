@@ -16,6 +16,7 @@
     - [prefer_returning_to_exporting](#preferreturningtoexporting)
   - [Documentation](#documentation)
     - [abapdoc](#abapdoc)
+    - [check_comments](#checkcomments)
   - [Syntax/object usage](#syntaxobject-usage)
     - [obsolete_statement](#obsoletestatement)
     - [functional_writing](#functionalwriting)
@@ -30,6 +31,8 @@
     - [inline_data_old_versions](#inlinedataoldversions)
     - [form_tables_obsolete](#formtablesobsolete)
     - [type_form_parameters](#typeformparameters)
+    - [chain_mainly_declarations](#chainmainlydeclarations)
+    - [fully_type_constants](#fullytypeconstants)
   - [Redundant code](#redundant-code)
     - [commented_code](#commentedcode)
     - [empty_structure](#emptystructure)
@@ -37,10 +40,12 @@
   - [Naming conventions](#naming-conventions)
     - [class_attribute_names](#classattributenames)
     - [local_class_naming](#localclassnaming)
+    - [selection_screen_naming](#selectionscreennaming)
     - [local_variable_names](#localvariablenames)
     - [method_parameter_names](#methodparameternames)
     - [object_naming](#objectnaming)
     - [form_no_dash](#formnodash)
+    - [allowed_object_naming](#allowedobjectnaming)
   - [Formatting](#formatting)
     - [keyword_case](#keywordcase)
     - [line_only_punc](#lineonlypunc)
@@ -77,6 +82,7 @@
     - [rfc_error_handling](#rfcerrorhandling)
     - [release_idoc](#releaseidoc)
     - [check_abstract](#checkabstract)
+    - [check_text_elements](#checktextelements)
 
 ## Code structure
 
@@ -181,6 +187,10 @@ Enabled.
 ### abapdoc
 
 Require abapdoc comments for public methods and properties.
+
+### check_comments
+
+Can be used to disallow end of line comments using the parameter `allowEndOfLine`.
 
 ## Syntax/object usage
 
@@ -293,6 +303,30 @@ Looks for untyped form parameters. Usage of both forms and untyped parameters is
 
 Enabled.
 
+### chain_mainly_declarations
+
+Restricts the use of chaining to declarations.
+
+https://docs.abapopenchecks.org/checks/23/
+
+### fully_type_constants
+
+Checks that constants are fully typed.
+
+```
+" incorrectly typed - these are implicitly `type c length 1`
+CONSTANTS: tested_name1 VALUE `blah`.
+CONSTANTS: tested_name2 VALUE 'blah'.
+
+CONSTANTS: tested_name3 VALUE 1234.
+
+" correctly typed
+CONSTANTS: tested_name4 type string VALUE 'blah'.
+CONSTANTS: tested_name5 type i VALUE 1234.
+```
+
+Enabled.
+
 ## Redundant code
 
 ### commented_code
@@ -338,6 +372,12 @@ https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#call-loca
 
 For now not enabled.
 
+### selection_screen_naming
+
+Enables you to enforce a pattern, such as a prefix, for selection screen `paramters` and `select-options`.
+
+Clean ABAP suggests that you eliminate prefixes, therefore this check is disabled by default.
+
 ### local_variable_names
 
 Disabled.
@@ -355,6 +395,12 @@ Disabled.
 ### form_no_dash
 
 Checks for a dash `-` in form names. Usage of dashes in names is heavily discouraged.
+
+Enabled.
+
+### allowed_object_naming
+
+Checks validity of object names (for example invalid characters, max length)
 
 Enabled.
 
@@ -630,5 +676,11 @@ Checks that
 
 - no class is abstract + final
 - non-abstract classes do not contain abstract methods
+
+Enabled.
+
+### check_text_elements
+
+Checks existence of text elements and they match their string literal values.
 
 Enabled.

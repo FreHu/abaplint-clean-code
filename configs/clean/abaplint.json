@@ -141,6 +141,18 @@
         "prefer_returning_to_exporting": true,
         "keep_single_parameter_on_one_line": {
             "length": 120
-        }
+        },
+        "allowed_object_naming": true,
+        "fully_type_constants": true,
+        "check_comments": {
+            "allowEndOfLine": true
+        },
+        "selection_screen_naming": {
+            "enabled": false,
+            "selectOption": "^s_.+$",
+            "parameter": "^p_.+$",
+            "patternKind": "forbidden"
+        },
+        "check_text_elements": true
     }
 }
