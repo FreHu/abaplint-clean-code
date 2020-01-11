@@ -14,6 +14,7 @@
     - [if_in_if](#ifinif)
     - [line_length](#linelength)
     - [prefer_returning_to_exporting](#preferreturningtoexporting)
+    - [prefix_is_current_class](#prefixiscurrentclass)
   - [Documentation](#documentation)
     - [abapdoc](#abapdoc)
     - [check_comments](#checkcomments)
@@ -62,9 +63,11 @@
     - [empty_line_in_statement](#emptylineinstatement)
     - [empty_statement](#emptystatement)
     - [keep_single_parameter_on_one_line](#keepsingleparameterononeline)
+    - [newline_between_methods](#newlinebetweenmethods)
   - [Other](#other)
     - [7bit_ascii](#7bitascii)
     - [check_syntax](#checksyntax)
+    - [check_ddic](#checkddic)
     - [tabl_enhancement_category](#tablenhancementcategory)
     - [ambiguous_statement](#ambiguousstatement)
     - [message_exists](#messageexists)
@@ -83,6 +86,8 @@
     - [release_idoc](#releaseidoc)
     - [check_abstract](#checkabstract)
     - [check_text_elements](#checktextelements)
+    - [check_include](#checkinclude)
+    - [xml_consistency](#xmlconsistency)
 
 ## Code structure
 
@@ -181,6 +186,16 @@ Checks for `exporting` parameters which can be turned into `returning`.
 https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#prefer-returning-to-exporting
 
 Enabled.
+
+### prefix_is_current_class
+
+Checks for unnecessary class prefixes, for example
+
+`zcl_foo=>` does not need to be specified inside of `zcl_foo`.
+
+The parameter `omitMeInstanceCalls` can be used to allow/prevent usage of `me->` for methods.
+
+https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#omit-the-self-reference-me-when-calling-an-instance-method
 
 ## Documentation
 
@@ -544,6 +559,12 @@ cl_foo=>bar(
     x = 5 ).
 ```
 
+### newline_between_methods
+
+Allows to enforce a certain number of newlines between methods. At least one line is required.
+
+Use the parameters `logic` (exact/less) and `count` to configure the rule.
+
 ## Other
 
 ### 7bit_ascii
@@ -556,6 +577,12 @@ Disabled.
 ### check_syntax
 
 Enables variable analysis (experimental).
+
+Enabled.
+
+### check_ddic
+
+Checks that referenced ddic types can be resolved. If they are not part of your serialized package, they need to be included in a repository mentioned in the config's `dependencies`.
 
 Enabled.
 
@@ -684,3 +711,11 @@ Enabled.
 Checks existence of text elements and they match their string literal values.
 
 Enabled.
+
+### check_include
+
+Checks that referenced includes exist.
+
+### xml_consistency
+
+Checks abapgit xml metadata consistency.

@@ -3,8 +3,7 @@
         "files": "/src/**/*.*",
         "skipGeneratedGatewayClasses": true,
         "skipGeneratedPersistentClasses": true,
-        "skipGeneratedFunctionGroups": true,
-        "applyUnspecifiedRules": true
+        "skipGeneratedFunctionGroups": true
     },
     "syntax": {
         "version": "v753",
@@ -28,9 +27,10 @@
             "kernelCall": true,
             "communication": true,
             "statics": true,
-            "systemCall": true
+            "systemCall": true,
+            "break": true,
+            "defaultKey": true
         },
-        "breakpoint": true,
         "check_syntax": true,
         "class_attribute_names": {
             "ignoreExceptions": true,
@@ -243,6 +243,16 @@
             "parameter": "^p_.+$",
             "patternKind": "required"
         },
-        "check_text_elements": true
+        "check_text_elements": true,
+        "check_ddic": true,
+        "newline_between_methods": {
+            "logic": "less",
+            "count": 3
+        },
+        "check_include": true,
+        "xml_consistency": true,
+        "prefix_is_current_class": {
+            "omitMeInstanceCalls": true
+        }
     }
 }

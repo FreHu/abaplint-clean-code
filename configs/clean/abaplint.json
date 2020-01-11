@@ -3,8 +3,7 @@
         "files": "/src/**/*.*",
         "skipGeneratedGatewayClasses": true,
         "skipGeneratedPersistentClasses": true,
-        "skipGeneratedFunctionGroups": true,
-        "applyUnspecifiedRules": false
+        "skipGeneratedFunctionGroups": true
     },
     "syntax": {
         "version": "v753",
@@ -27,9 +26,10 @@
             "kernelCall": true,
             "communication": true,
             "statics": true,
-            "systemCall": true
+            "systemCall": true,
+            "break": true,
+            "defaultKey": true
         },
-        "breakpoint": true,
         "commented_code": true,
         "constructor_visibility_public": {
             "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#if-your-global-class-is-create-private-leave-the-constructor-public"
@@ -147,12 +147,15 @@
         "check_comments": {
             "allowEndOfLine": true
         },
-        "selection_screen_naming": {
-            "enabled": false,
-            "selectOption": "^s_.+$",
-            "parameter": "^p_.+$",
-            "patternKind": "forbidden"
+        "check_text_elements": true,
+        "newline_between_methods":{
+            "logic": "less",
+            "count": 3
         },
-        "check_text_elements": true
+        "check_include": true,
+        "xml_consistency": true,
+        "prefix_is_current_class": {
+            "omitMeInstanceCalls": true
+        }
     }
 }
