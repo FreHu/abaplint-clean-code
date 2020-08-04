@@ -248,6 +248,24 @@
         "xml_consistency": true,
         "prefix_is_current_class": {
             "omitMeInstanceCalls": true
-        }
+        },
+        "check_no_handler_pragma": true,
+        "line_break_multiple_parameters": true,
+        "forbidden_identifier": {
+            "check": [],
+            "exclude": []
+        },
+        "forbidden_void_type": true,
+        "prefer_inline": true,
+        "reduce_string_templates": true,
+        "sicf_consistency": true,
+        "sql_escape_host_variables": true,
+        "try_without_catch": true,
+        "type_begin_single_include": true,
+        "types_naming": {
+            "pattern": "^T._.*$"
+        },
+        "unknown_types": true,
+        "unused_variables": true
     }
 }
