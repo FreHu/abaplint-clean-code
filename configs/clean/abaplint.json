@@ -31,9 +31,7 @@
             "defaultKey": true
         },
         "commented_code": true,
-        "constructor_visibility_public": {
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#if-your-global-class-is-create-private-leave-the-constructor-public"
-        },
+        "constructor_visibility_public": true,
         "description_empty": true,
         "empty_statement": true,
         "empty_structure": {
@@ -45,39 +43,28 @@
             "do": true,
             "at": true
         },
-        "exporting": {
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#omit-the-optional-keyword-exporting"
-        },
+        "exporting": true,
         "functional_writing": {
             "ignoreExceptions": true
         },
         "global_class": true,
         "identical_form_names": true,
-        "if_in_if": {
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-the-nesting-depth-low"
-        },
+        "if_in_if": true,
         "inline_data_old_versions": true,
         "line_length": {
-            "length": 120,
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#stick-to-a-reasonable-line-length"
+            "length": 120
         },
-        "max_one_statement": {
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#no-more-than-one-statement-per-line"
-        },
+        "max_one_statement": true,
         "message_exists": true,
         "method_length": {
             "statements": 25,
             "ignoreTestClasses": false,
-            "errorWhenEmpty": true,
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-methods-small"
+            "errorWhenEmpty": true
         },
-        "mix_returning": {
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#use-either-returning-or-exporting-or-changing-but-not-a-combination"
-        },
+        "mix_returning": true,
         "msag_consistency": true,
         "nesting": {
-            "depth": 5,
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-the-nesting-depth-low"
+            "depth": 5
         },
         "obsolete_statement": {
             "refresh": true,

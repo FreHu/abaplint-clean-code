@@ -40,9 +40,7 @@
         "cloud_types": true,
         "colon_missing_space": true,
         "commented_code": true,
-        "constructor_visibility_public": {
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#if-your-global-class-is-create-private-leave-the-constructor-public"
-        },
+        "constructor_visibility_public": true,
         "contains_tab": true,
         "definitions_top": true,
         "description_empty": true,
@@ -66,17 +64,13 @@
             "at": true
         },
         "exit_or_check": true,
-        "exporting": {
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#omit-the-optional-keyword-exporting"
-        },
+        "exporting": true,
         "functional_writing": {
             "ignoreExceptions": true
         },
         "global_class": true,
         "identical_form_names": true,
-        "if_in_if": {
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-the-nesting-depth-low"
-        },
+        "if_in_if": true,
         "in_statement_indentation": {
             "ignoreExceptions": true
         },
@@ -97,8 +91,7 @@
             "ignoreFunctionModuleName": false
         },
         "line_length": {
-            "length": 120,
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#stick-to-a-reasonable-line-length"
+            "length": 120
         },
         "line_only_punc": {
             "ignoreExceptions": true
@@ -113,14 +106,11 @@
             "expectedConstant": "^LC_.*$",
             "expectedFS": "^<L._.*>$"
         },
-        "max_one_statement": {
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#no-more-than-one-statement-per-line"
-        },
+        "max_one_statement": true,
         "message_exists": true,
         "method_length": {
             "statements": 100,
             "ignoreTestClasses": false,
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-methods-small",
             "errorWhenEmpty": true
         },
         "method_parameter_names": {
@@ -133,17 +123,13 @@
                 "P_TASK"
             ]
         },
-        "mix_returning": {
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#use-either-returning-or-exporting-or-changing-but-not-a-combination"
-        },
+        "mix_returning": true,
         "msag_consistency": true,
         "nesting": {
-            "depth": 5,
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#keep-the-nesting-depth-low"
+            "depth": 5
         },
         "no_public_attributes": {
-            "allowReadOnly": true,
-            "reason": "https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md#use-read-only-sparingly"
+            "allowReadOnly": true
         },
         "object_naming": {
             "clas": "^ZC(L|X)\\_",
