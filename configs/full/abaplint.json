@@ -35,7 +35,10 @@
         "class_attribute_names": {
             "ignoreExceptions": true,
             "statics": "^G._.*$",
-            "instance": "^M._.*$"
+            "instance": "^M._.*$",
+            "constants": "^C._.*$",
+            "ignoreLocal": false,
+            "ignoreInterfaces": false
         },
         "cloud_types": true,
         "colon_missing_space": true,
@@ -88,7 +91,8 @@
             "ignoreLowerClassImplmentationStatement": true,
             "ignoreGlobalClassDefinition": false,
             "ignoreGlobalInterface": false,
-            "ignoreFunctionModuleName": false
+            "ignoreFunctionModuleName": false,
+            "ignoreKeywords": []
         },
         "line_length": {
             "length": 120
@@ -146,7 +150,10 @@
             "auth": "^Z",
             "pinf": "^Z",
             "idoc": "^Z",
-            "xslt": "^Z"
+            "xslt": "^Z",
+            "shlp": "^Z",
+            "ssfo": "^Z",
+            "ssst": "^Z"
         },
         "obsolete_statement": {
             "refresh": true,
@@ -157,7 +164,9 @@
             "move": true,
             "divide": true,
             "requested": true,
-            "occurs": true
+            "occurs": true,
+            "setExtended": true,
+            "withHeaderLine": true
         },
         "parser_error": true,
         "preferred_compare_operator": {

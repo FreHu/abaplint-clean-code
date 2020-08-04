@@ -75,7 +75,9 @@
             "move": true,
             "divide": true,
             "requested": true,
-            "occurs": true
+            "occurs": true,
+            "setExtended": true,
+            "withHeaderLine": true
         },
         "parser_error": true,
         "preferred_compare_operator": {
