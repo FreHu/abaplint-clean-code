@@ -41,7 +41,8 @@
             "case": true,
             "select": true,
             "do": true,
-            "at": true
+            "at": true,
+            "try": true
         },
         "exporting": true,
         "functional_writing": {
@@ -77,7 +78,8 @@
             "requested": true,
             "occurs": true,
             "setExtended": true,
-            "withHeaderLine": true
+            "withHeaderLine": true,
+            "fieldSymbolStructure": true
         },
         "parser_error": true,
         "preferred_compare_operator": {
@@ -121,7 +123,6 @@
         "empty_line_in_statement": {
             "allowChained": true
         },
-        "form_no_dash": true,
         "check_abstract": true,
         "no_public_attributes": {
             "allowReadOnly": true
@@ -137,7 +138,7 @@
             "allowEndOfLine": true
         },
         "check_text_elements": true,
-        "newline_between_methods":{
+        "newline_between_methods": {
             "logic": "less",
             "count": 3
         },
@@ -153,8 +154,18 @@
         "sicf_consistency": true,
         "sql_escape_host_variables": true,
         "try_without_catch": true,
-        "type_begin_single_include": true,
+        "names_no_dash": true,
         "unknown_types": true,
-        "unused_variables": true
+        "unused_variables": true,
+        "unused_types": true,
+        "use_bool_expression": true,
+        "use_line_exists": true,
+        "check_subrc": true,
+        "cyclomatic_complexity": {
+            "max": 6
+        },
+        "parser_missing_space": true,
+        "identical_conditions": true,
+        "prefer_is_not": true
     }
 }

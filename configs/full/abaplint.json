@@ -64,7 +64,8 @@
             "case": true,
             "select": true,
             "do": true,
-            "at": true
+            "at": true,
+            "try": true
         },
         "exit_or_check": true,
         "exporting": true,
@@ -92,6 +93,7 @@
             "ignoreGlobalClassDefinition": false,
             "ignoreGlobalInterface": false,
             "ignoreFunctionModuleName": false,
+            "ignoreGlobalClassBoundaries": true,
             "ignoreKeywords": []
         },
         "line_length": {
@@ -166,7 +168,8 @@
             "requested": true,
             "occurs": true,
             "setExtended": true,
-            "withHeaderLine": true
+            "withHeaderLine": true,
+            "fieldSymbolStructure": true
         },
         "parser_error": true,
         "preferred_compare_operator": {
@@ -181,7 +184,8 @@
             ]
         },
         "remove_descriptions": {
-            "ignoreExceptions": false
+            "ignoreExceptions": false,
+            "ignoreWorkflow": true
         },
         "sequential_blank": {
             "lines": 4
@@ -220,7 +224,6 @@
         "type_form_parameters": true,
         "rfc_error_handling": true,
         "abapdoc": true,
-        "form_no_dash": true,
         "release_idoc": true,
         "prefer_returning_to_exporting": true,
         "keep_single_parameter_on_one_line": {
@@ -261,11 +264,29 @@
         "sicf_consistency": true,
         "sql_escape_host_variables": true,
         "try_without_catch": true,
-        "type_begin_single_include": true,
         "types_naming": {
             "pattern": "^T._.*$"
         },
         "unknown_types": true,
-        "unused_variables": true
+        "unused_variables": true,
+        "begin_single_include": true,
+        "check_subrc": true,
+        "cyclomatic_complexity":{
+            "max": 6
+        },
+        "forbidden_pseudo_and_pragma": {
+            "ignoreGlobalClassDefinition": false,
+            "ignoreGlobalInterface": false,
+            "pragmas": ["##NO_TEXT"],
+            "pseudo": ["#EC NOTEXT"]
+          },
+          "identical_conditions": true,
+          "line_break_style": true,
+          "names_no_dash": true,
+          "parser_missing_space": true,
+          "prefer_is_not": true,
+          "unused_types":true,
+          "use_bool_expression": true,
+          "use_line_exists": true
     }
 }
